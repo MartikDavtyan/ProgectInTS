@@ -12,10 +12,10 @@ const Game: React.FC = () => {
 
     let newGrid = [...grid];
     
-    if (e.key === 'ArrowLeft' || e.key === 'A' || e.key === 'a') {newGrid = moveTiles(grid, 'left', setScore);}
-    if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D'){ newGrid = moveTiles(grid, 'right', setScore);}
-    if (e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W') {newGrid = moveTiles(grid, 'up', setScore);}
-    if (e.key === 'ArrowDown' || e.key === 's' || e.key === 'S') {newGrid = moveTiles(grid, 'down', setScore);}
+    if (e.key === 'ArrowLeft' || e.key === 'A' || e.key === 'a') {newGrid = moveTiles(grid, 'left', setScore,score);}
+    if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D'){ newGrid = moveTiles(grid, 'right', setScore,score);}
+    if (e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W') {newGrid = moveTiles(grid, 'up', setScore,score);}
+    if (e.key === 'ArrowDown' || e.key === 's' || e.key === 'S') {newGrid = moveTiles(grid, 'down', setScore,score);}
 
     setGrid(newGrid);
 

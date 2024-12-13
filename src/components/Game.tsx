@@ -4,14 +4,13 @@ import { initializeGrid, moveTiles, isGameOver } from '../utils/gameLogic';
 
 const Game: React.FC = () => {
   const [grid, setGrid] = useState<number[]>(initializeGrid());
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState<number>(0);
   const [gameOver, setGameOver] = useState(false);
 
   const handleKeyDown = (e: KeyboardEvent) => {
     if (gameOver) return;
 
     let newGrid = [...grid];
-    console.log(e);
     
     if (e.key === 'ArrowLeft' || e.key === 'A' || e.key === 'a') {newGrid = moveTiles(grid, 'left', setScore);}
     if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D'){ newGrid = moveTiles(grid, 'right', setScore);}

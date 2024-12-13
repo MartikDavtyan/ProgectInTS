@@ -6,7 +6,7 @@ interface TileProps {
 
 const Tile: React.FC<TileProps> = ({ value }) => {
   const getColor = (value: number) => {
-    const colors = {
+    const colors: { [key: number]: string } = {
       0: 'bg-gray-400',
       2: 'bg-yellow-100',
       4: 'bg-yellow-200',
